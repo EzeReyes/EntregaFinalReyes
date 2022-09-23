@@ -424,25 +424,27 @@ grid-column: 1/3;
     height: 20rem;
     align-items: center;
     justify-content: center;
+    background-size:cover;
 }
 
 .banner h2 {
     color: rgba(255, 255, 255, 0.467);
     text-decoration: underline;
-    font-size: 1.875rem;
+    font-size: 4rem;
+    font-style: oblique;
+    text-transform: uppercase;
+    font-stretch: condensed;
+    font-weight: bold;
 }
 
 
 .grid-pr {
     grid-area: prod;
-    display: grid;
-    gap: 0.625rem;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4,1fr);
-    justify-items: start;
-    background-color: black;    
-    border-radius: 0.313rem;
-    margin: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    justify-items: center;
+    background-image: linear-gradient(106deg, #50136e7d, black);
 }
 
 
@@ -452,13 +454,20 @@ grid-column: 1/3;
     padding: 0.625rem;
 }
 
+.pr img{
+border-radius: 5rem;
+}
 .grid-pr .pr p{
 font-size: 1.25rem;
 color: white;
+margin: 1rem;
 }
 
 
 /* contacto */
+
+
+
 .mapa {
     height: 100vh;
     display: flex;
