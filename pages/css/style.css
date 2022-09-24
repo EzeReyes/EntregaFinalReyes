@@ -292,7 +292,6 @@ footer {
         "quien quien quien"  
         "com com com"
         "foot foot foot";
-    background-image: linear-gradient(to bottom, rgb(0, 0, 0),blueviolet);
 }
 
 
@@ -301,7 +300,8 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1.25rem;
+    padding: 1.25rem;
+    background-image: radial-gradient(rgb(0, 0, 0),rgb(8, 39, 50));
 }
 
 .quienes h2 {
@@ -309,7 +309,7 @@ font-size: 6.25rem;
 padding: 0.625rem;
 animation-duration: 5s;
 animation-name: aparecerQuienes;
-animation-iteration-count:initial;
+animation-iteration-count:infinite;
 } 
 
 @keyframes aparecerQuienes {
@@ -321,7 +321,7 @@ color: #feffff;
 
 100% {
 opacity:1;
-color: #47525d;
+color: gold;
 }
 }
 
@@ -342,6 +342,7 @@ height: 30rem;
 font-size: 1.25rem;
 text-align: center;
 margin-left: 1.25rem;
+color: white;
 }
 
 .comunidad {
