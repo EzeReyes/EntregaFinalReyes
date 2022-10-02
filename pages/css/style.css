@@ -291,6 +291,7 @@ footer {
         "navb navb navb"
         "quien quien quien"  
         "com com com"
+        "res res res"
         "foot foot foot";
 }
 
@@ -301,56 +302,88 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 1.25rem;
-    background-image: radial-gradient(rgb(0, 0, 0),rgb(8, 39, 50));
-}
-
-.quienes h2 {
-font-size: 6.25rem;
-padding: 0.625rem;
-animation-duration: 5s;
-animation-name: aparecerQuienes;
-animation-iteration-count:infinite;
-} 
-
-@keyframes aparecerQuienes {
-0% {
-text-align: center;
-opacity: 0;
-color: #feffff;
-}
-
-100% {
-opacity:1;
-color: gold;
-}
-}
-
-
-.quienes img {
-border-radius: 0.625rem;
+    background: radial-gradient(black, transparent);
 }
 
 .quienes div {
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-height: 30rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    }
+
+.quienes div h2 {
+    font-size: 6.25rem;
+    padding: 0.625rem;
+    color: #2079b0;
 }
 
 .quienes div p {
-font-size: 1.25rem;
-text-align: center;
-margin-left: 1.25rem;
-color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin-left: 1.25rem;
+    color: white;
+    }
+
+.quienes div img {
+border-radius: 0.625rem;
 }
+
+
 
 .comunidad {
 grid-area: com;
 display: flex;
-flex-direction: column;
-align-items: center;
-background-image: linear-gradient(to top,rgb(38 53 66),rgb(18, 17, 17));
+flex-direction: row;
+align-items:center;
+justify-content: space-around;
+padding: 1rem;
+background: black;
+height: 70rem;
+}
+
+.comunidad .king {
+    color: white;
+    text-align: center;
+}
+
+.king h3 {
+    font-size: 10rem;
+    animation-duration: 10s;
+    animation-name: rey;
+    animation-iteration-count:infinite;
+    color: #dddddf;
+} 
+@keyframes rey{
+    0% {
+    text-align: center;
+    opacity: 0;
+    text-decoration: none;
+    }
+    
+    50% {
+        text-decoration:underline;
+    }
+    
+    100% {
+    opacity:1;
+    text-decoration:overline;
+    }
+    }
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    background-color: #f5a74f;
+}
+
+.containerCarousel {
+    width: 30rem;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+    border: 1rem solid #dddddf;
 }
 
 .comunidad .titular {
@@ -378,27 +411,78 @@ margin: 1.25rem;
 }
 }
 
-.comunidad .grid-container {
-display: grid;
-gap: 0.625rem;
-grid-template-columns: repeat(3, 16.25rem);
-grid-template-rows: repeat(3, 22.25rem);
-align-self: center;
-justify-items: center;
-border-radius: 0.313rem;
-margin: 1rem;
+.calidad {
+    display: flex;
+    flex-direction: column;
 }
 
-.grid-container .item {
-background-color: white;
-padding: 0.063rem;
-border: 0.125rem solid black;
-align-items: center;
-border-radius: 0.313rem;
+.reseña {
+    grid-area: res;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.reseña__titulo{
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    padding: 1rem;
+    background: linear-gradient(rgb(239, 234, 234),rgba(0, 0, 0, 0.034)) ,url(../img/imgFondo/1.jpg);
+    background-attachment: fixed;
+    justify-content: center;
+    
 }
 
-.item:nth-child(4) {
-grid-column: 1/3;
+.reseña__titulo-h2 {
+    font-size: 4rem;
+    color: #000000;
+    animation-name: moverY;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+    @keyframes moverY{
+
+        0% {
+            transform:translateY(70%);
+            color: rgba(255, 255, 255, 0.597);
+        }
+
+        100% {
+            transform:translateY(0%);
+        }
+        
+    }
+
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+    margin: 1rem;
+}
+
+.conte{
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    height: 25rem;
+    background-color: #dddddf;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-weight: bold;
+    align-items: center;
+}
+
+.conte img {
+
+    border-radius: 10rem;
+    width: 50%;
+}
+
+div p {
+    font-weight: lighter;
 }
 
 /* productos */
