@@ -230,6 +230,7 @@ aside div p {
 
 .comunidad {
     flex-direction: column;
+    height: 80rem;
 }
 
 .calidad {
@@ -266,9 +267,111 @@ aside div p {
 div p {
     font-weight: lighter;
     font-size: 1.5rem;
-    }    
 }    
-/* medias queries */
+
+/* productos */
+
+.grid-area3 {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+        "navb"
+        "bann"
+        "prod"  
+        "foot";
+    grid-template-columns: 100vw;
+}
+
+.banner {
+    background: white;
+}
+
+.banner h2 {
+    color:#dddddf;
+    text-decoration: underline;
+    font-size: 4rem;
+    font-style: oblique;
+    text-transform: uppercase;
+    font-stretch: condensed;
+    font-weight: bold;
+    animation-name: mover;
+    animation-duration:0s;
+    animation-iteration-count: 1;
+}
+
+
+.grid-pr {
+    grid-area: prod;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    justify-items: center;
+    background-image: linear-gradient(106deg, #fefeff, #dddddf);
+}
+
+.grid-pr .pr {
+    display: flex;
+    align-items: center;
+    padding: 0.625rem;
+}
+
+.grid-pr .pr {
+    color: black;
+}
+
+.pr img{
+border-radius: 5rem;
+width: 50%;
+}
+
+
+/* contacto */
+
+
+
+.mapa {
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: space-around;
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(9, 40, 118, 0.75)), url("../img/contacto/2.png");
+    background-repeat: repeat-x;
+    background-position: center;
+}
+
+.mapa div {
+    margin: 0.625rem;
+    align-items: center;
+    color: rgba(245, 245, 243, 0.794);
+    font-size: 1.875rem;
+}
+
+.bg--black2 h3 {
+    text-align: justify;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    }
+
+.bg--black2 .suscribe {
+    border-radius: 50%;
+}    
+    
+.bg--black2 .suscribe h5 {
+    font-size: 1rem;
+}
+
+.bg--black2 img {
+    width: 100%;
+    border-radius: 1.25rem;
+    margin: 1rem 0;
+}
+
+.btnSuscribe {
+    margin-top: 1rem;
+}
+
+}
 
 @media (min-width: 325px) and (max-width: 576px) {
 
@@ -498,4 +601,107 @@ div p {
     font-weight: lighter;
     font-size: 1.5rem;
 }
+
+/* productos */
+
+.grid-area3 {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+        "navb"
+        "bann"
+        "prod"  
+        "foot";
+    grid-template-columns: 100vw;
+}
+
+.banner {
+    background: white;
+}
+
+.banner h2 {
+    color:#dddddf;
+    text-decoration: underline;
+    font-size: 4rem;
+    font-style: oblique;
+    text-transform: uppercase;
+    font-stretch: condensed;
+    font-weight: bold;
+    animation-name: mover;
+    animation-duration:0s;
+    animation-iteration-count: 1;
+}
+
+
+.grid-pr {
+    grid-area: prod;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    justify-items: center;
+    background-image: linear-gradient(106deg, #fefeff, #dddddf);
+}
+
+.grid-pr .pr {
+    display: flex;
+    align-items: center;
+    padding: 0.625rem;
+}
+
+.pr img{
+border-radius: 5rem;
+width: 50%;
+}
+
+.grid-pr .pr p{
+font-size: 1.25rem;
+color: rgb(97, 92, 92);
+margin: 1rem;
+}
+
+
+/* contacto */
+
+
+
+.mapa {
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: space-around;
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(9, 40, 118, 0.75)), url("../img/contacto/2.png");
+    background-repeat: repeat-x;
+    background-position: center;
+}
+
+.mapa div {
+    margin: 0.625rem;
+    align-items: center;
+    color: rgba(245, 245, 243, 0.794);
+    font-size: 1.875rem;
+}
+
+.bg--black2 h3 {
+    text-align: justify;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    }
+
+.bg--black2 .suscribe {
+    border-radius: 50%;
+}    
+    
+.bg--black2 .suscribe h5 {
+    font-size: 1rem;
+}
+
+.bg--black2 img {
+    width: 100%;
+    border-radius: 1.25rem;
+    margin: 1rem 0;
+}
+
+.btnSuscribe {
+    margin-top: 1rem;
 }
