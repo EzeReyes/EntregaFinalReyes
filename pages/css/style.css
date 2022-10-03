@@ -588,3 +588,49 @@ margin: 1rem;
     font-size: 1.875rem;
 }
 
+/* carrito */
+
+.gridCarrito {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+        "navb navb navb"
+        "car car car"  
+        "foot foot foot";
+}
+
+.carrito {
+    display: grid;
+    grid-area: car;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    background-color: aqua;
+    gap: 1rem;
+    justify-items: center;
+    padding: 1rem;
+}
+
+.carrito div {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+div .botones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #47525d;
+    border-radius: 0;
+}
+
+div img {
+    border-radius: 1rem;
+}
+
+
+
