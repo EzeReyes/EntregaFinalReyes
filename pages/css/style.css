@@ -634,21 +634,49 @@ margin: 1rem;
     width: 40rem;
 }
 
-.texto {
-    color: #980000;
-    font-size: 2
-    rem;
+.compra {
+    height: 5rem;
+    background-color:#626263;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    
 }
+
+.compra span {
+    display: block;
+    white-space: nowrap;
+    color: #dee7f3;
+    border-right: 5px solid #dee7f3;
+    width: 39ch;
+    animation: escribir 5s steps(43),
+    parpadeo 0.4s infinite alternate;
+    overflow:hidden ;
+}
+
+@keyframes escribir {
+    from {
+        width: 0;
+    }
+}
+@keyframes parpadeo {
+    70% {
+        border-color: transparent;
+    }
+}
+
 
 .carrito {
     display: grid;
     grid-area: car;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    background-color: rgb(251, 255, 255);
+    background-color: #111112a8;
     gap: 1rem;
     justify-items: center;
     padding: 1rem;
+    border: 1rem solid;
 }
 
 .carrito div {
@@ -658,6 +686,8 @@ margin: 1rem;
     height: auto;
     border-radius: 1rem;
 }
+
+
 
 .carrito__titulo{
     text-align: center;
@@ -683,6 +713,7 @@ margin: 1rem;
 
 .wave {
     grid-area: wav;
+    background-color: #000000;
 }
 
 
