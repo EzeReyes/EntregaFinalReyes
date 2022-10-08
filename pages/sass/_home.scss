@@ -1,0 +1,432 @@
+.grid-area {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+        "navb navb navb"
+        "ppal ppal ppal"  
+        "bgwh bgwh bgwh"
+        "bgbl bgbl bgbl"
+        "bgwh2 bgwh2 bgwh2"
+        "asi bgbl2 bgbl2"
+        "foot foot foot";
+}
+
+main {
+    grid-area: ppal;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    .parrafo {
+        background-color: black;
+        text-align: center;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content:space-evenly;
+        color: white;
+        padding: 1rem;
+        align-items: center;
+        h1 {
+            animation-duration: 2s;
+            animation-name: colorG;
+            animation-iteration-count:infinite;
+            @keyframes colorG {
+                0% {
+                    color: #11121270;
+                }
+                
+                50% {
+                    color: grey;
+                }
+        
+                100% {
+                    color: #fdfeff;
+                    }
+                }  
+            }
+        }
+    }
+    
+    .parrafo a:hover {
+        font-weight: bold;
+        text-decoration:none;
+        color:#f5a74f;  
+    }    
+    .parrafo a:active{
+        color:gold ;
+    }
+    
+
+    .enlace {
+        text-decoration: none;
+        color: white;
+    }
+
+    .btnConocenos{
+        font-size: 1rem;
+        padding: 0.5rem;
+        width: max-content;
+        text-align: center;    
+        height: 2.5rem;
+        border-radius: 0.7rem;
+        background-image: linear-gradient(to bottom, #eb94d07c, #2079b08b);
+    }
+
+    .btnConocenos:hover {
+        background: #2079b0;
+        text-decoration: none;
+    }
+
+
+    .bg--white {
+        grid-area: bgwh;
+        display: flex;
+        flex-direction:row;
+        background-color: white;
+        align-items: center;
+        padding: 1rem;      
+        p {
+            font-size: 1.5rem;
+            color:#522f2fab;
+            text-align: justify;
+        }
+        img {
+                padding: 0.6rem;
+                border: 1px solid white;
+                border-radius: 1.25rem;
+                }
+            }
+        
+            
+        .bg--black {
+                grid-area: bgbl;
+                display: flex;
+                flex-direction:row-reverse;
+                background-image:linear-gradient(to top,white,black);
+                background-position: center;
+                background-attachment: fixed;
+                align-items: center;
+                padding: 1rem;
+                height: 50rem;
+                h3 {
+                    display: flex;
+                    align-items: center;
+                    font-size: 3rem;
+                    color: white;
+                    text-align: right;
+                    font-weight: bolder;
+                    }
+                img {
+                    width: 31.25rem;
+                    border: 0.063rem solid white;
+                    border-radius: 1.25rem;
+                    }
+                }
+
+        .bg--white2 {
+                grid-area: bgwh2;
+                display: flex;
+                flex-direction:row;
+                background-color: white;
+                padding: 1.25rem;                    
+                align-items: center;
+                h3 {
+                    font-size: 3rem;
+                    color: black;
+                    text-align: left;
+                    font-weight: bolder;
+                }
+                img {
+                    width: 31.25rem;
+                    padding: 0.625rem;
+                    border: 1px solid white;
+                    border-radius: 1.25rem;
+                    margin: 1rem;
+                }
+        }
+
+        aside {
+            background-color: rgba(23, 23, 23, 0.934);
+            grid-area: asi;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.625rem;
+            div p {
+                font-size: 1.25rem;
+                color: white;
+                margin: 0.5rem 0;
+                font-weight: bolder;
+                }
+            div video {
+                width: 21rem;
+                border-radius: 0.3rem;
+                background-color: aliceblue;
+                }
+            }
+    
+        .bg--black2 {
+            grid-area: bgbl2;
+            display: flex;
+            flex-direction:column;
+            justify-content: space-around;
+            align-items: center;
+            background-color: black;
+            padding: 1.25rem;
+            h3 {
+                font-size: 3.125rem;
+                color: white;
+                text-align: center;
+                text-shadow: rgba(255, 215, 0) 0 4rem 3rem;
+                }
+            .suscribe {
+                text-align: center;
+                color: gold;
+                font-size: 1.25rem;
+            }    
+            input:focus {
+                background-color:#ffff0059;
+            }
+            .btnSuscribe{
+                 border-radius: 3rem;
+                 background-image: linear-gradient(to bottom, #eb94d07c, #2079b08b);
+                 font-size: 1rem;
+                 padding: 0.5rem;
+            }
+            .btnSuscribe:hover {
+                 background: #2079b0;
+                 color: #e9ecef;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 900px) {
+
+            /* home */ 
+            .grid-area {
+            display: grid;
+            height: 100vh;
+            grid-template-areas: 
+                "navb navb"
+                "ppal ppal"  
+                "bgwh bgwh"
+                "bgbl bgbl"
+                "bgwh2 bgwh2"
+                "asi bgbl2"
+                "foot foot";
+                width: 100vw;
+}
+            
+
+            main {
+                flex-direction:column;
+                background-color: #ffffff;
+                align-items: center;
+                width: 100vw; 
+            }
+
+        }
+
+@media (min-width: 577px) and (max-width: 768px) {
+.grid-area {
+    display: grid;
+    grid-template-areas: 
+        "navb navb"
+        "ppal ppal"  
+        "bgwh bgwh"
+        "bgbl bgbl"
+        "bgwh2 bgwh2"
+        "asi asi" 
+        "bgbl2 bgbl2"
+        "foot foot";    
+    width: 100vw;
+    height: 100vh;
+    }
+
+main {
+    flex-direction:column;
+    align-items: center;
+    width: 100vw; 
+    .parrafo {
+        h1 {
+            margin: 1rem;
+            text-align: center;
+        }
+        h2 {
+            margin: 2rem;
+            text-transform: uppercase ;
+            }
+        }
+    img {
+        width: 100vw;
+        }
+        }
+    
+.bg--white {
+    flex-direction:column;
+    width: 100vw;
+    img {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+.bg--black {
+    grid-area: bgbl;
+    flex-direction:column-reverse;
+    width: 100vw;   
+    justify-content: center;
+    h3 {
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+    img {
+    width: 100%;
+    }
+    }
+
+.bg--white2 {
+    flex-direction:column;
+    font-size: 2rem;
+    h3 {
+        text-align: center;
+        font-size: 2rem;
+    }
+    img {
+        width: 100%;
+        }
+    }
+
+
+    aside div p {
+        color: white;
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+    
+    .bg--black2 {
+        h3 {
+        text-align: justify;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        }
+        .suscribe {
+            border-radius: 50%;
+            h5 {
+                font-size: 1rem;
+                }
+            }
+        img {
+            width: 100%;
+            border-radius: 1.25rem;
+            margin: 1rem 0;
+            }
+            }
+        
+    .btnSuscribe {
+        margin-top: 1rem;
+    }
+        }
+
+        @media (min-width: 325px) and (max-width: 576px) {
+
+            .grid-area {
+                        display: grid;
+                        grid-template-areas: 
+                        "navb"
+                        "ppal"  
+                        "bgwh"
+                        "bgbl"
+                        "bgwh2"
+                        "asi" 
+                        "bgbl2"
+                        "foot";    
+                        grid-template-columns: 100vw;
+                        height: 100vh;
+                    }
+        
+            main {
+                flex-direction:column;
+                align-items: center;
+                width: 100vw; 
+                img {
+                    width: 100%;
+                }
+            }
+            
+            .parrafo {
+                h1 {
+                    margin: 1rem;
+                    text-align: center;
+                }
+                h2 {
+                    margin: 2rem;
+                    text-transform: uppercase ;
+                }
+            }
+                
+            .bg--white {
+                flex-direction:column;
+                width: 100vw;
+                img {
+                    width: 100%;
+                    margin: 1rem 0;
+                }
+            }
+            
+            .bg--black {
+                grid-area: bgbl;
+                flex-direction:column-reverse;
+                width: 100vw;   
+                justify-content: center;
+                 h3 {
+                    text-align: center;
+                    font-size: 2rem;
+                    margin-top: 2rem;
+                }
+                img {
+                    width: 100%;
+                    }
+                }
+            
+            .bg--white2 {
+                flex-direction:column;
+                font-size: 2rem;
+                h3 {
+                    text-align: center;
+                    font-size: 2rem;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            
+            aside div p {
+                color: white;
+                margin: 1.5rem 0;
+                text-align: center;
+            }
+            
+            .bg--black2 {
+                h3 {
+                    text-align: justify;
+                    margin-bottom: 2rem;
+                    font-size: 2rem;
+                    }
+                img {
+                    width: 100%;
+                    border-radius: 1.25rem;
+                    margin: 1rem 0;
+                    }
+                .suscribe {
+                    border-radius: 50%;
+                     h5 {
+                        font-size: 1rem;
+                        }
+                    }
+                }
+        
+            .btnSuscribe {
+                margin-top: 1rem;
+            }
+        }        

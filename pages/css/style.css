@@ -1,4 +1,4 @@
-* {
+/* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -9,6 +9,7 @@
 
 /* globales */
 
+/*
 .menu {
         grid-area: navb;
 }
@@ -65,7 +66,7 @@ footer {
         border-radius: 1rem;
     }
     /* home */
-    
+    /*
     .grid-area {
         display: grid;
         height: 100vh;
@@ -77,7 +78,8 @@ footer {
             "bgwh2 bgwh2 bgwh2"
             "asi bgbl2 bgbl2"
             "foot foot foot";
-    }
+    }*/
+    /* 
     main {
         grid-area: ppal;
         display: flex;
@@ -101,6 +103,8 @@ footer {
         animation-name: colorG;
         animation-iteration-count:infinite;
         } 
+
+        
         
         @keyframes colorG {
         0% {
@@ -115,6 +119,8 @@ footer {
             color: #fdfeff;
             }
         }
+ 
+         
 
     .enlace {
         text-decoration: none;
@@ -141,11 +147,13 @@ footer {
         background-image: linear-gradient(to bottom, #eb94d07c, #2079b08b);
     }
 
+    
+
     .btnConocenos:hover {
         background: #2079b0;
         text-decoration: none;
     }
-    
+
     .bg--white {
         grid-area: bgwh;
         display: flex;
@@ -279,9 +287,9 @@ footer {
          background: #2079b0;
          color: #e9ecef;
 }
-
+*/
 /* quienes somos */
-
+/*
 .grid-area2 {
     display: grid;
     height: 100vh;
@@ -409,7 +417,7 @@ margin: 1.25rem;
     color: white;
 }
 }
-
+/*
 .calidad {
     display: flex;
     flex-direction: column;
@@ -484,12 +492,10 @@ margin: 1.25rem;
 div p {
     font-weight: lighter;
 }
-
+*/
 /* productos */
 
-.bdblack {
-    background-color: black;
-}
+
 .grid-area3 {
     display: grid;
     height: 100vh;
@@ -571,7 +577,7 @@ margin: 1rem;
 
 /* contacto */
 
-
+/*
 
 .mapa {
     height: 100vh;
@@ -592,7 +598,7 @@ margin: 1rem;
 }
 
 /* carrito */
-
+/*
 .gridCarrito {
     display: grid;
     height: 100vh;

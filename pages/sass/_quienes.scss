@@ -1,0 +1,502 @@
+.grid-area2 {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+        "navb navb navb"
+        "quien quien quien" 
+        "ico ico ico" 
+        "com com com"
+        "res res res"
+        "foot foot foot";
+    }
+
+    
+.quienes {
+    grid-area: quien;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem;
+    background: black;
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        h2 {
+            font-size: 6.25rem;
+            padding: 0.625rem;
+            color:white;
+            text-shadow: #1964cc 0 2rem 1rem;
+            }
+        p {
+            font-size: 2rem;
+            text-align: center;
+            margin-left: 1.25rem;
+            color: white;
+            }
+        img {
+            border-radius: 0.625rem;
+            }
+            }
+}
+
+
+.iconos {
+    grid-area: ico;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    height: 20rem;
+    justify-content: space-around;
+    .iconos__titulo {
+        text-align: center;
+        color: #f5f8fa;
+        h3 {
+            font-family: "Fredoka One", cursive;
+        }
+        }
+    .iconos__img {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border-radius: 50%;
+        background-color: white;
+    }
+}
+
+
+.comunidad {
+    grid-area: com;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-around;
+    padding: 1rem;
+    background: black;
+    height: 55rem;
+    .titular {
+        margin: 1.25rem;
+        animation-duration: 30s;
+        animation-name: aparecerTitular;
+        animation-iteration-count:infinite;
+        text-align: center;
+        border-radius: 1rem;
+        
+        @keyframes aparecerTitular {
+            0% {
+            opacity: 0.5;
+            color: black;
+            background-color: #f5f8fa;
+            }
+            100% {
+            opacity:1;
+            background-color: black;
+            color: white;
+        }
+        }
+        } 
+    .king {
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        h3 {
+            font-size: 10rem;
+            animation-duration: 10s;
+            animation-name: rey;
+            animation-iteration-count:infinite;
+            color: #dddddf;
+            } 
+        @keyframes rey{
+            0% {
+            text-align: center;
+            opacity: 0;
+            text-decoration: none;
+            }
+        
+            50% {
+            text-decoration:underline;
+            }
+        
+            100% {
+            opacity:1;
+            text-decoration:overline;
+            }
+            }
+        }
+}
+
+    .carousel-control-next-icon, .carousel-control-prev-icon {
+        background-color: #f5a74f;
+    }
+    
+    .containerCarousel {
+        width: 30rem;
+    }
+    
+    .carousel-inner img {
+        width: 100%;
+        height: auto;
+        border-radius: 2rem;
+        border: 1rem solid #dddddf;
+    }
+    
+    .calidad {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .reseña {
+        grid-area: res;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .reseña__titulo{
+            display: flex;
+            flex-direction: column;
+            height: 20rem;
+            padding: 1rem;
+            background: linear-gradient(rgb(239, 234, 234),rgba(0, 0, 0, 0.034)) ,url(../img/imgFondo/1.jpg);
+            background-attachment: fixed;
+            justify-content: center;
+            .reseña__titulo-h2 {
+                font-size: 4rem;
+                color: #000000;
+                animation-name: moverY;
+                animation-duration: 10s;
+                animation-iteration-count: infinite;
+                }
+                @keyframes moverY{
+    
+                0% {
+                transform:translateY(40%);
+                color: rgba(255, 255, 255, 0.597);
+                }
+    
+                100% {
+                transform:translateY(0%);
+                }
+            }
+            }
+        }
+
+        .cont {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content:space-evenly;
+            height: 40rem;
+            background: #000000;
+        }
+        
+        .conte{
+            display: flex;
+            flex-direction: column;
+            width: 15rem;
+            height: auto;
+            background-color: #dddddf;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: 1rem dashed rgba(128, 128, 128, 0.45);
+            text-align: center;
+            font-weight: bold;
+            align-items: center;
+            img {
+                border-radius: 10rem;
+                width: 50%;
+                }
+            p {
+                font-weight: lighter;
+                }
+            }
+
+            @media (min-width: 769px) and (max-width: 900px) {
+
+                .grid-area2 {
+                    display: grid;
+                    height: 100vh;
+                    grid-template-areas: 
+                        "navb navb"
+                        "quien quien" 
+                        "ico ico" 
+                        "com com"
+                        "res res"
+                        "foot foot";
+                    width: 100vw;
+                    }
+                
+
+                .quienes div {
+                    flex-direction: column;
+                h2 {
+                    font-size: 4rem;
+                }
+            }
+                
+                .comunidad {
+                    flex-direction: column-reverse;
+                    }
+                
+                .reseña__titulo-h2 {
+                    animation-name: moverY;
+                    animation-duration: 10s;
+                    animation-iteration-count: infinite;
+                }
+                @keyframes moverY{
+                    0% {
+                        transform:translateY(10%);
+                        color: rgba(255, 255, 255, 0.597);
+                }
+                    100% {
+                        transform:translateY(0%);
+                }                    
+                }
+                }
+
+                @media (min-width: 577px) and (max-width: 768px) {
+
+                    .grid-area2 {
+                        display: grid;
+                        height: 100vh;
+                        grid-template-areas: 
+                            "navb navb"
+                            "quien quien"
+                            "ico ico"
+                            "com com"
+                            "res res"
+                            "foot foot";
+                        width: 100vw;
+                        }
+                    
+
+                    .quienes {
+                        grid-area: quien;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 1.25rem;
+                        background: black;
+                        div {
+                            display: flex;
+                            flex-direction: column-reverse;
+                            align-items: center;
+                            justify-content: center;
+                            h2 {
+                                font-size: 4rem;
+                                text-align: center;
+                            }
+                            }
+                        }
+                    
+                        .iconos {
+                            display: none;
+                        }
+
+                        .comunidad {
+                            grid-area: com;
+                            display: flex;
+                            flex-direction: column;
+                            align-items:center;
+                            justify-content: space-around;
+                            padding: 1rem;
+                            background: black;
+                            height: 55rem;
+                            .titular {
+                                margin: 1.25rem;
+                                animation-duration: 0s;
+                                animation-name: aparecerTitular;
+                                animation-iteration-count:infinite;
+                                text-align: center;
+                                border-radius: 1rem;
+                            }
+                            .king {
+                                display: none;
+                            }
+                        }
+                    
+
+                            .calidad {
+                                display: flex;
+                                flex-direction: column;
+                            }
+                            
+                            .reseña {
+                                grid-area: res;
+                                display: flex;
+                                flex-direction: column;
+                                text-align: center;
+                                .reseña__titulo{
+                                    display: flex;
+                                    flex-direction: column;
+                                    height: 20rem;
+                                    padding: 1rem;
+                                    background: linear-gradient(rgb(239, 234, 234),rgba(0, 0, 0, 0.034)) ,url(../img/imgFondo/1.jpg);
+                                    background-attachment: fixed;
+                                    justify-content: center;
+                                    .reseña__titulo-h2 {
+                                        font-size: 2rem;
+                                        color: #000000;
+                                        animation-name: moverY;
+                                        animation-duration: 0s;
+                                        animation-iteration-count:0;
+                                        }
+                         
+                                   }
+                                }
+                        
+                                .cont {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content:space-evenly;
+                                    height: auto;
+                                    background: #000000;
+                                    margin: 0;
+                                    .conte{
+                                        display: flex;
+                                        flex-direction: column;
+                                        width: 15rem;
+                                        height: auto;
+                                        background-color: #dddddf;
+                                        padding: 1rem;
+                                        border-radius: 1rem;
+                                        border: 1rem dashed rgba(128, 128, 128, 0.45);
+                                        text-align: center;
+                                        font-weight: bold;
+                                        align-items: center;
+                                        img {
+                                            border-radius: 10rem;
+                                            width: 50%;
+                                            }
+                                        p {
+                                            font-weight: lighter;
+                                            }
+                                             }
+                                        }
+                                    }
+
+
+                                    @media (min-width: 325px) and (max-width: 576px) {
+
+                                        .grid-area2 {
+                                            display: grid;
+                                            height: 100vh;
+                                            grid-template-areas: 
+                                                "navb"
+                                                "quien"
+                                                "ico"
+                                                "com"
+                                                "res"
+                                                "foot";
+                                            grid-template-columns: 100vw;
+                                            }
+                                        
+                                            
+                    .quienes {
+                        grid-area: quien;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 1.25rem;
+                        background: black;
+                        div {
+                            display: flex;
+                            flex-direction: column-reverse;
+                            align-items: center;
+                            justify-content: center;
+                            h2 {
+                                font-size: 3rem;
+                                text-align: center;
+                            }
+                            }
+                        }
+                    
+                        .iconos {
+                            display: none;
+                        }
+
+                        .comunidad {
+                            grid-area: com;
+                            display: flex;
+                            flex-direction: column;
+                            align-items:center;
+                            justify-content: space-around;
+                            padding: 1rem;
+                            background: black;
+                            height: 55rem;
+                            .titular {
+                                animation-duration: 0s;
+                                animation-name: aparecerTitular;
+                                animation-iteration-count:infinite;
+                                text-align: center;
+                                border-radius: 1rem;
+                            }
+                            .king {
+                                display: none;
+                            }
+                        }
+                    
+                        .containerCarousel {
+                            width: auto;
+                        }
+
+                            .calidad {
+                                display: flex;
+                                flex-direction: column;
+                            }
+                            
+                            .reseña {
+                                grid-area: res;
+                                display: flex;
+                                flex-direction: column;
+                                text-align: center;
+                                .reseña__titulo{
+                                    display: flex;
+                                    flex-direction: column;
+                                    height: 20rem;
+                                    padding: 1rem;
+                                    background: linear-gradient(rgb(239, 234, 234),rgba(0, 0, 0, 0.034)) ,url(../img/imgFondo/1.jpg);
+                                    background-attachment: fixed;
+                                    justify-content: center;
+                                    .reseña__titulo-h2 {
+                                        font-size: 2rem;
+                                        color: #000000;
+                                        animation-name: moverY;
+                                        animation-duration: 0s;
+                                        animation-iteration-count:0;
+                                        }
+                         
+                                   }
+                                }
+                        
+                                .cont {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content:space-evenly;
+                                    height: auto;
+                                    background: #000000;
+                                    margin: 0;
+                                    .conte{
+                                        display: flex;
+                                        flex-direction: column;
+                                        width: 15rem;
+                                        height: auto;
+                                        background-color: #dddddf;
+                                        padding: 1rem;
+                                        border-radius: 1rem;
+                                        border: 1rem dashed rgba(128, 128, 128, 0.45);
+                                        text-align: center;
+                                        font-weight: bold;
+                                        align-items: center;
+                                        img {
+                                            border-radius: 10rem;
+                                            width: 50%;
+                                            }
+                                        p {
+                                            font-weight: lighter;
+                                            }
+                                             }
+                                        }
+                                    }

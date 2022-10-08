@@ -585,6 +585,7 @@ aside div p {
 .cont {
     flex-direction: column;
     margin: 1rem;
+    height: auto;
 }
     
 .conte {
@@ -704,4 +705,5 @@ margin: 1rem;
 
 .btnSuscribe {
     margin-top: 1rem;
+}
 }

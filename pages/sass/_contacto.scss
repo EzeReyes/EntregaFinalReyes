@@ -1,0 +1,17 @@
+
+.mapa {
+    height: 100vh;
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: space-around;
+    background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(9, 40, 118, 0.75)), url("../img/contacto/2.png");
+    background-repeat: repeat-x;
+    background-position: center;
+    div {
+        margin: 0.625rem;
+        align-items: center;
+        color: rgba(245, 245, 243, 0.794);
+        font-size: 1.875rem;
+        }
+    }

@@ -1,0 +1,71 @@
+
+.grid-area3 {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+        "navb navb navb"
+        "bann bann bann"
+        "nues nues nues"
+        "prod prod prod"  
+        "foot foot foot";
+}
+
+.banner {
+    grid-area: bann;
+    display:flex;
+    background: linear-gradient(rgb(4 1 1),rgba(0, 0, 0, 0.034)) ,url(../img/producto/barberia.jpg);
+    background-attachment: fixed;
+    text-align: center;
+    height: 20rem;
+    align-items: center;
+    justify-content: center;
+    background-size:cover;
+    h2 {
+        color: rgba(255, 255, 255, 0.467);
+        text-decoration: underline;
+        font-size: 4rem;
+        font-style: oblique;
+        text-transform: uppercase;
+        font-stretch: condensed;
+        font-weight: bold;
+        animation-name: mover;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        }
+        @keyframes mover{
+
+        0% {
+            transform:translateX(-5%);
+        }
+
+        50% {
+            transform:translateX(10%);
+        }
+
+        100% {
+            transform:translateX(0%);
+        }
+    }   
+}
+
+.grid-pr {
+    grid-area: prod;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    justify-items: center;
+    background-image: linear-gradient(26deg, grey, black);
+    .pr {
+        display: flex;
+        align-items: center;
+        padding: 0.625rem;
+        img{
+        border-radius: 5rem;
+        }
+        p{
+        font-size: 1.25rem;
+        color: white;
+        margin: 1rem;
+        }
+    }
+}
