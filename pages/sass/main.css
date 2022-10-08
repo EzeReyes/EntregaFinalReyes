@@ -736,7 +736,7 @@ aside div video {
   .grid-area2 {
     display: grid;
     height: 100vh;
-    grid-template-areas: "navb navb" "quien quien" "ico ico" "com com" "res res" "foot foot";
+    grid-template-areas: "navb" "quien" "ico" "com" "res" "foot";
     width: 100vw;
   }
   .quienes div {
@@ -779,8 +779,8 @@ aside div video {
   .grid-area2 {
     display: grid;
     height: 100vh;
-    grid-template-areas: "navb navb" "quien quien" "ico ico" "com com" "res res" "foot foot";
-    width: 100vw;
+    grid-template-areas: "navb" "quien" "ico" "com" "res" "foot";
+    grid-template-columns: 100vw;
   }
   .quienes {
     grid-area: quien;
@@ -789,14 +789,21 @@ aside div video {
     align-items: center;
     padding: 1.25rem;
     background: black;
+    width: 100vw;
   }
-  .quienes div {
+  .quienes div h2 {
     display: flex;
+    text-align: center;
+    font-size: 4rem;
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
   }
-  .quienes div h2 {
+  .quienes div {
+    flex-direction: column-reverse;
+  }
+  .quienes div img {
+    width: 50vw;
     font-size: 4rem;
     text-align: center;
   }
@@ -910,6 +917,9 @@ aside div video {
   .quienes div h2 {
     font-size: 3rem;
     text-align: center;
+  }
+  .quienes div img {
+    width: 70vw;
   }
   .iconos {
     display: none;

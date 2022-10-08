@@ -217,12 +217,12 @@
                     display: grid;
                     height: 100vh;
                     grid-template-areas: 
-                        "navb navb"
-                        "quien quien" 
-                        "ico ico" 
-                        "com com"
-                        "res res"
-                        "foot foot";
+                        "navb"
+                        "quien" 
+                        "ico" 
+                        "com"
+                        "res"
+                        "foot";
                     width: 100vw;
                     }
                 
@@ -260,13 +260,13 @@
                         display: grid;
                         height: 100vh;
                         grid-template-areas: 
-                            "navb navb"
-                            "quien quien"
-                            "ico ico"
-                            "com com"
-                            "res res"
-                            "foot foot";
-                        width: 100vw;
+                            "navb"
+                            "quien"
+                            "ico"
+                            "com"
+                            "res"
+                            "foot";
+                        grid-template-columns: 100vw;
                         }
                     
 
@@ -277,17 +277,27 @@
                         align-items: center;
                         padding: 1.25rem;
                         background: black;
-                        div {
-                            display: flex;
-                            flex-direction: column-reverse;
-                            align-items: center;
-                            justify-content: center;
-                            h2 {
-                                font-size: 4rem;
-                                text-align: center;
+                        width: 100vw;
+                            div {
+                                h2 {
+                                    display: flex;
+                                    text-align: center;
+                                    font-size: 4rem;
+                                    flex-direction: column-reverse;
+                                    align-items: center;
+                                    justify-content: center;
+                                    }
+                                }
+                            div {
+                                flex-direction: column-reverse;
+                                img { 
+                                    width: 50vw;
+                                    font-size: 4rem;
+                                    text-align: center;
+                                    }
+                                }
                             }
-                            }
-                        }
+                        
                     
                         .iconos {
                             display: none;
@@ -389,7 +399,7 @@
                                                 "com"
                                                 "res"
                                                 "foot";
-                                            grid-template-columns: 100vw;
+                                                grid-template-columns: 100vw;
                                             }
                                         
                                             
@@ -409,7 +419,10 @@
                                 font-size: 3rem;
                                 text-align: center;
                             }
+                            img {
+                                width: 70vw;
                             }
+                        }
                         }
                     
                         .iconos {
