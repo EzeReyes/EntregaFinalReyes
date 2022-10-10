@@ -8,7 +8,6 @@
         "wav wav wav"
         "foot foot foot";
 }
-
 .novedades {
     display: flex;
     align-items: center;
@@ -94,12 +93,173 @@
             }
         }
 
-    .carrito div:hover > img {
-    transform: scale(1.3);
-    box-shadow: 0 0.5rem 1rem 0.5rem rgba(5, 86, 223, 0.5);
-    }
+    .carrito div:active > img {
+        transform: scale(1.2);
+        box-shadow: 0 0.5rem 1rem 0.5rem rgba(5, 86, 223, 0.5);
+        }
 
     .wave {
-    grid-area: wav;
-    background-color: #000000;
+        grid-area: wav;
+        background-color: #000000;
+        text-align: center;
+        h3 {
+            color: #dddddf;
+        }    
+    }
+        .wave:hover {
+            background-color: #dddddf;
+            h3 {
+                color: #000000;
+                text-shadow:rgb(255 255 255) 0 0 1rem;    
+                text-decoration: underline;  
+              /*   animation-duration: 2s;
+                animation-name: sombra;
+                animation-iteration-count:1;
+                @keyframes sombra {
+                    0% {
+                        color: #dddddf;
+                        text-shadow:rgb(46, 46, 48) 0 0 1rem;       
+                    }
+            
+                    100% {
+                        color: #000000;
+                        text-shadow:rgb(255 255 255) 0 0 1rem;    
+                        text-decoration: underline;  
+                    } */
+                    }  
+            }
+
+
+
+    @media (min-width: 577px) and (max-width: 835px) {
+
+        .gridCarrito {
+            display: grid;
+            height: 100vh;
+            grid-template-areas: 
+                "navb"
+                "nov"
+                "car"  
+                "wav"
+                "foot";
+            grid-template-columns: 100vw;
+        }
+        
+        .novedades {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000000;
+            flex-direction: column;
+            .novedades__cont {
+                padding: 2rem;
+                grid-area: nov;
+                width: 40rem;
+            }
+            .novedades__título {
+                color: #dddddf;
+                font-size: 2rem;
+                padding: 1rem;
+                h3 {
+                text-align: center;
+                text-shadow: rgba(5, 86, 223, 0.5) 0 4rem 3rem;
+                text-transform: capitalize;
+                font-size: 5rem;
+                margin-bottom: 4rem;
+                }
+                }
+            }
+        
+        .compra {
+            height: auto;
+            background-color:#626263;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            span {
+                display: block;
+                white-space: nowrap;
+                color: #dee7f3;
+                border-right: 5px solid #dee7f3;
+                width: 39ch;
+                animation: escribir 5s steps(43),
+                parpadeo 0.4s infinite alternate;
+                overflow:hidden ;
+                }
+                @keyframes escribir {
+                from {
+                    width: 0;
+                    }
+                }
+                @keyframes parpadeo {
+                    70% {
+                    border-color: transparent;
+                    }
+                }
+            }
+        
+        .carrito {
+            display: grid;
+            grid-area: car;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            background-color: #111112a8;
+            gap: 1rem;
+            justify-items: center;
+            padding: 1rem;
+            border: 1rem solid;
+        }
+    }
+    @media (min-width: 325px) and (max-width: 576px) {
+
+        .gridCarrito {
+            display: grid;
+            height: 100vh;
+            grid-template-areas: 
+                "navb"
+                "nov"
+                "car"  
+                "wav"
+                "foot";
+            grid-template-columns: 100vw;
+        }
+        
+        .novedades {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000000;
+            flex-direction: column;
+            .novedades__cont {
+                padding: 2rem;
+                grid-area: nov;
+                width: 100vw;
+            }
+            h3 {
+                text-align: center;
+            }
+        }
+
+        .compra {
+            height: auto;
+            background-color:#626263;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+        }
+        
+        .carrito {
+            display: grid;
+            grid-area: car;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            background-color: #111112a8;
+            gap: 1rem;
+            justify-items: center;
+            padding: 1rem;
+            border: 1rem solid;
+        }
+
     }

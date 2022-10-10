@@ -8,10 +8,90 @@
     background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(9, 40, 118, 0.75)), url("../img/contacto/2.png");
     background-repeat: repeat-x;
     background-position: center;
-    div {
+    .mapa__texto {
+        display: flex;
+        flex-direction: column;
         margin: 0.625rem;
         align-items: center;
         color: rgba(245, 245, 243, 0.794);
         font-size: 1.875rem;
+        justify-content: center;
+        text-align: center;
+        animation-duration: 2s;
+        animation-name: shadow;
+        animation-iteration-count:infinite;
+        @keyframes shadow {
+            0% {
+                text-shadow:blue 0 0 1rem;       
+            }
+
+            50% {
+                text-shadow:red 0 0 1rem;       
+
+            }
+    
+            100% {
+                text-shadow:rgb(255 255 255) 0 0 1rem;      
+            }
+            }  
+
+        h2 {
+            text-decoration: underline;
+            font-size: 3rem;
         }
     }
+
+    .mapa__ubi {
+        display: flex;
+        width: 100vw;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    iframe {
+            border-radius: 1rem;
+            width: 50%;
+            height: 20rem;
+        }
+        iframe:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0.5rem 1rem 0.5rem rgba(255, 255, 255, 0.5); 
+            }
+            }
+        }
+        @media (min-width: 577px) and (max-width: 900px) {
+        .mapa {
+            height: auto;
+            display: flex;
+            flex-direction:column;
+
+        .mapa__ubi {
+            iframe {
+                    border-radius: 1rem;
+                    width: 80%;
+                }
+                iframe:hover {
+                    transform: none;
+            }
+            }
+        }
+    }
+        
+    
+            @media (min-width: 325px) and (max-width: 576px) {
+
+                .mapa {
+                    height: auto;
+                    display: flex;
+                    flex-direction:column;
+
+                .mapa__ubi {
+                    iframe {
+                            border-radius: 1rem;
+                            width: 80%;
+                        }
+                        iframe:hover {
+                            transform: none;
+                    }
+                    }
+                }
+            }
