@@ -1153,127 +1153,169 @@ aside div video {
     grid-template-areas: "navb" "bann" "prop" "prod" "foot";
     grid-template-columns: 100vw;
   }
-}
-.banner {
-  grid-area: bann;
-  display: flex;
-  background: linear-gradient(rgb(4, 1, 1), rgba(0, 0, 0, 0.034)), url(../img/producto/barberia.jpg);
-  background-attachment: fixed;
-  text-align: center;
-  height: 20rem;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-}
-.banner h2 {
-  color: rgba(255, 255, 255, 0.467);
-  text-decoration: underline;
-  font-size: 4rem;
-  font-style: oblique;
-  text-transform: uppercase;
-  font-stretch: condensed;
-  font-weight: bold;
-  -webkit-animation-name: mover;
-          animation-name: mover;
-  -webkit-animation-duration: 0s;
-          animation-duration: 0s;
-  -webkit-animation-iteration-count: initial;
-          animation-iteration-count: initial;
-}
-@keyframes mover {
-  0% {
-    transform: translateX(-5%);
+  .banner {
+    grid-area: bann;
+    display: flex;
+    background: linear-gradient(rgb(4, 1, 1), rgba(0, 0, 0, 0.034)), url(../img/producto/barberia.jpg);
+    background-attachment: fixed;
+    text-align: center;
+    height: 20rem;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
   }
-  50% {
-    transform: translateX(10%);
+  .banner h2 {
+    -webkit-animation-name: mover;
+            animation-name: mover;
+    -webkit-animation-duration: 0s;
+            animation-duration: 0s;
+    -webkit-animation-iteration-count: initial;
+            animation-iteration-count: initial;
   }
-  100% {
-    transform: translateX(0%);
+  .prop {
+    height: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: linear-gradient(45deg, #84837c, #b0a299);
+  }
+  .prop .parrafo {
+    justify-content: center;
+  }
+  .prop .parrafo p {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  .prop .imag {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .prop .imag img {
+    border-radius: 2rem;
+    border: 1rem solid gold;
+    width: 30rem;
+    margin: 1rem;
+  }
+  .prop .info {
+    display: flex;
+    flex-direction: column;
+    border: 1rem solid #dfc30f;
+    width: 20rem;
+    margin: 1rem;
+    align-items: center;
+    padding: 1rem;
+    text-align: justify;
+    background-color: #000000;
+    color: white;
+  }
+  .prop .info h4 {
+    text-align: center;
+    text-decoration: underline;
+  }
+  .prop .botonInfo {
+    border: 0.5rem solid #dfc30f;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background-color: #000000;
+  }
+  .prop .botonInfo h3 {
+    text-align: start;
+    text-decoration: underline;
+    color: white;
+  }
+  .grid-pr {
+    grid-area: prod;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background-color: black;
+    padding: 2rem;
+  }
+  .grid-pr .pr {
+    display: flex;
+    align-items: center;
+    margin: 6rem;
+    justify-content: space-evenly;
+  }
+  .grid-pr .pr img {
+    border-radius: 5rem;
+    box-shadow: 0 0.5rem 1rem 0.5rem #b0a299;
+  }
+  .grid-pr .pr p {
+    font-size: 1.25rem;
+    color: white;
+    margin: 1rem;
   }
 }
-
-.prop {
-  grid-area: prop;
-  display: flex;
-  flex-direction: column;
-  height: 100rem;
-  align-items: center;
-  justify-content: space-evenly;
-  background-image: linear-gradient(45deg, #84837c, #b0a299);
+@media (min-width: 577px) and (max-width: 768px) {
+  .grid-area3 {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "navb" "bann" "prop" "prod" "foot";
+    grid-template-columns: 100vw;
+  }
+  .banner {
+    grid-area: bann;
+    display: flex;
+    background: linear-gradient(rgb(4, 1, 1), rgba(0, 0, 0, 0.034)), url(../img/producto/barberia.jpg);
+    background-attachment: fixed;
+    text-align: center;
+    height: 20rem;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+  }
+  .banner h2 {
+    -webkit-animation-name: mover;
+            animation-name: mover;
+    -webkit-animation-duration: 0s;
+            animation-duration: 0s;
+    -webkit-animation-iteration-count: initial;
+            animation-iteration-count: initial;
+  }
+  .prop {
+    height: auto;
+  }
+  .prop .imag {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .prop .imag img {
+    border-radius: 2rem;
+    border: 1rem solid gold;
+    width: 30rem;
+    margin: 1rem;
+  }
+  .grid-pr {
+    grid-area: prod;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background-color: black;
+    padding: 2rem;
+  }
+  .grid-pr .pr {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+    justify-content: space-evenly;
+  }
+  .grid-pr .pr img {
+    width: 70%;
+    border-radius: 5rem;
+    box-shadow: 0 0.5rem 1rem 0.5rem #b0a299;
+  }
+  .grid-pr .pr p {
+    margin-top: 3rem;
+  }
 }
-.prop .parrafo {
-  justify-content: center;
-}
-.prop .parrafo p {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: bolder;
-}
-.prop .imag {
-  display: flex;
-  flex-direction: row;
-  height: auto;
-  align-items: center;
-  justify-content: space-evenly;
-}
-.prop .imag img {
-  border-radius: 2rem;
-  border: 1rem solid gold;
-  width: 30rem;
-  margin: 1rem;
-}
-.prop .info {
-  display: flex;
-  flex-direction: column;
-  border: 1rem solid #dfc30f;
-  width: 20rem;
-  margin: 1rem;
-  align-items: center;
-  padding: 1rem;
-  text-align: justify;
-  background-color: #000000;
-  color: white;
-}
-.prop .info h4 {
-  text-align: center;
-  text-decoration: underline;
-}
-.prop .botonInfo {
-  border: 0.5rem solid #dfc30f;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  background-color: #000000;
-}
-.prop .botonInfo h3 {
-  text-align: start;
-  text-decoration: underline;
-  color: white;
-}
-
-.grid-pr {
-  grid-area: prod;
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  background-color: black;
-  padding: 2rem;
-}
-.grid-pr .pr {
-  display: flex;
-  align-items: center;
-  margin: 6rem;
-  justify-content: space-evenly;
-}
-.grid-pr .pr img {
-  border-radius: 5rem;
-  box-shadow: 0 0.5rem 1rem 0.5rem #b0a299;
-}
-.grid-pr .pr p {
-  font-size: 1.25rem;
-  color: white;
-  margin: 1rem;
-}
-
 @media (min-width: 325px) and (max-width: 576px) {
   .grid-area3 {
     display: grid;
@@ -1306,28 +1348,6 @@ aside div video {
             animation-duration: 0s;
     -webkit-animation-iteration-count: initial;
             animation-iteration-count: initial;
-  }
-  @-webkit-keyframes mover {
-    0% {
-      transform: translateX(-5%);
-    }
-    50% {
-      transform: translateX(10%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-  @keyframes mover {
-    0% {
-      transform: translateX(-5%);
-    }
-    50% {
-      transform: translateX(10%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
   }
   .prop {
     grid-area: prop;

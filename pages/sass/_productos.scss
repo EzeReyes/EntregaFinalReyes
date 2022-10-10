@@ -145,51 +145,24 @@
             "foot";
             grid-template-columns: 100vw;
         }
-}
-
-.banner {
-    grid-area: bann;
-    display:flex;
-    background: linear-gradient(rgb(4 1 1),rgba(0, 0, 0, 0.034)) ,url(../img/producto/barberia.jpg);
-    background-attachment: fixed;
-    text-align: center;
-    height: 20rem;
-    align-items: center;
-    justify-content: center;
-    background-size:cover;
-    h2 {
-        color: rgba(255, 255, 255, 0.467);
-        text-decoration: underline;
-        font-size: 4rem;
-        font-style: oblique;
-        text-transform: uppercase;
-        font-stretch: condensed;
-        font-weight: bold;
-        animation-name: mover;
-        animation-duration: 0s;
-        animation-iteration-count: initial;
+        .banner {
+            grid-area: bann;
+            display:flex;
+            background: linear-gradient(rgb(4 1 1),rgba(0, 0, 0, 0.034)) ,url(../img/producto/barberia.jpg);
+            background-attachment: fixed;
+            text-align: center;
+            height: 20rem;
+            align-items: center;
+            justify-content: center;
+            background-size:cover;
+            h2 {
+                animation-name: mover;
+                animation-duration: 0s;
+                animation-iteration-count: initial;
+                }
         }
-        @keyframes mover{
-
-        0% {
-            transform:translateX(-5%);
-        }
-
-        50% {
-            transform:translateX(10%);
-        }
-
-        100% {
-            transform:translateX(0%);
-        }
-    }   
-}
-
 .prop {
-    grid-area: prop;
-    display: flex;
-    flex-direction: column;
-    height: 100rem;
+    height: auto;
     align-items: center;
     justify-content: space-evenly;
     background-image: linear-gradient(45deg, #84837c,#b0a299);
@@ -203,7 +176,7 @@
     }
     .imag {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         height: auto;
         align-items: center;
         justify-content: space-evenly;
@@ -268,7 +241,77 @@
             }
         }
 }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    .grid-area3 {
+        display: grid;
+        height: 100vh;
+        grid-template-areas: 
+            "navb"
+            "bann"
+            "prop"
+            "prod"  
+            "foot";
+            grid-template-columns: 100vw;
+        }
+        .banner {
+            grid-area: bann;
+            display:flex;
+            background: linear-gradient(rgb(4 1 1),rgba(0, 0, 0, 0.034)) ,url(../img/producto/barberia.jpg);
+            background-attachment: fixed;
+            text-align: center;
+            height: 20rem;
+            align-items: center;
+            justify-content: center;
+            background-size:cover;
+            h2 {
+                animation-name: mover;
+                animation-duration: 0s;
+                animation-iteration-count: initial;
+                }
+        }
 
+.prop {
+    height: auto;
+    .imag {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        justify-content: space-evenly;
+        img {
+            border-radius: 2rem;
+            border: 1rem solid gold;
+            width: 30rem;
+            margin: 1rem;
+        }
+        }
+}
+        
+.grid-pr {
+    grid-area: prod;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background-color: black;
+    padding: 2rem;
+    .pr {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 2rem;
+        justify-content: space-evenly;
+        img{
+            width: 70%;
+            border-radius: 5rem;
+            box-shadow: 0 0.5rem 1rem 0.5rem #b0a299;
+            }
+        p {
+            margin-top: 3rem;
+            }
+        }
+    }
+}
 
 @media (min-width: 325px) and (max-width: 576px) {
     .grid-area3 {
@@ -306,20 +349,6 @@
         animation-duration: 0s;
         animation-iteration-count: initial;
         }
-        @keyframes mover{
-
-        0% {
-            transform:translateX(-5%);
-        }
-
-        50% {
-            transform:translateX(10%);
-        }
-
-        100% {
-            transform:translateX(0%);
-        }
-    }   
 }
 
 .prop {
