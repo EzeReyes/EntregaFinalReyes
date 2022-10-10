@@ -5,7 +5,7 @@
     grid-template-areas: 
         "navb navb navb"
         "bann bann bann"
-        "nues nues nues"
+        "prop prop prop"
         "prod prod prod"  
         "foot foot foot";
 }
@@ -48,24 +48,361 @@
     }   
 }
 
+.prop {
+    grid-area: prop;
+    display: flex;
+    flex-direction: column;
+    height: 100rem;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: linear-gradient(45deg, #84837c,#b0a299);
+    .parrafo {
+        justify-content: center;
+        p {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bolder;
+        }
+    }
+    .imag {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        align-items: center;
+        justify-content: space-evenly;
+    img {
+        border-radius: 2rem;
+        border: 1rem solid gold;
+        width: 30rem;
+        margin: 1rem;
+    }
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        border: 1rem  solid #dfc30f;
+        width: 20rem;
+        margin: 1rem;
+        align-items: center;
+        padding: 1rem;
+        text-align: justify;
+        background-color: #000000;
+        color: white;
+        h4 {
+            text-align: center;
+            text-decoration: underline;
+        }
+}
+    .botonInfo {
+        border: 0.5rem  solid #dfc30f;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        background-color: #000000;
+        h3 { 
+            text-align: start;  
+            text-decoration:underline;  
+            color:white;
+        }
+    }
+}
+
+
+
 .grid-pr {
     grid-area: prod;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
     justify-items: center;
-    background-image: linear-gradient(26deg, grey, black);
+    background-color: black;
+    padding: 2rem;
     .pr {
         display: flex;
         align-items: center;
-        padding: 0.625rem;
+        margin: 6rem;
+        justify-content: space-evenly;
         img{
-        border-radius: 5rem;
+            border-radius: 5rem;
+            box-shadow: 0 0.5rem 1rem 0.5rem #b0a299;
+            }
+            p{
+            font-size: 1.25rem;
+            color: white;
+            margin: 1rem;
+            }
         }
-        p{
-        font-size: 1.25rem;
-        color: white;
-        margin: 1rem;
+}
+
+
+@media (min-width: 769px) and (max-width: 900px) {
+    .grid-area3 {
+        display: grid;
+        height: 100vh;
+        grid-template-areas: 
+            "navb"
+            "bann"
+            "prop"
+            "prod"  
+            "foot";
+            grid-template-columns: 100vw;
+        }
+}
+
+.banner {
+    grid-area: bann;
+    display:flex;
+    background: linear-gradient(rgb(4 1 1),rgba(0, 0, 0, 0.034)) ,url(../img/producto/barberia.jpg);
+    background-attachment: fixed;
+    text-align: center;
+    height: 20rem;
+    align-items: center;
+    justify-content: center;
+    background-size:cover;
+    h2 {
+        color: rgba(255, 255, 255, 0.467);
+        text-decoration: underline;
+        font-size: 4rem;
+        font-style: oblique;
+        text-transform: uppercase;
+        font-stretch: condensed;
+        font-weight: bold;
+        animation-name: mover;
+        animation-duration: 0s;
+        animation-iteration-count: initial;
+        }
+        @keyframes mover{
+
+        0% {
+            transform:translateX(-5%);
+        }
+
+        50% {
+            transform:translateX(10%);
+        }
+
+        100% {
+            transform:translateX(0%);
+        }
+    }   
+}
+
+.prop {
+    grid-area: prop;
+    display: flex;
+    flex-direction: column;
+    height: 100rem;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: linear-gradient(45deg, #84837c,#b0a299);
+    .parrafo {
+        justify-content: center;
+        p {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bolder;
         }
     }
+    .imag {
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        align-items: center;
+        justify-content: space-evenly;
+    img {
+        border-radius: 2rem;
+        border: 1rem solid gold;
+        width: 30rem;
+        margin: 1rem;
+    }
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        border: 1rem  solid #dfc30f;
+        width: 20rem;
+        margin: 1rem;
+        align-items: center;
+        padding: 1rem;
+        text-align: justify;
+        background-color: #000000;
+        color: white;
+        h4 {
+            text-align: center;
+            text-decoration: underline;
+        }
+}
+    .botonInfo {
+        border: 0.5rem  solid #dfc30f;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        background-color: #000000;
+        h3 { 
+            text-align: start;  
+            text-decoration:underline;  
+            color:white;
+        }
+    }
+}
+
+
+
+.grid-pr {
+    grid-area: prod;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background-color: black;
+    padding: 2rem;
+    .pr {
+        display: flex;
+        align-items: center;
+        margin: 6rem;
+        justify-content: space-evenly;
+        img{
+            border-radius: 5rem;
+            box-shadow: 0 0.5rem 1rem 0.5rem #b0a299;
+            }
+            p{
+            font-size: 1.25rem;
+            color: white;
+            margin: 1rem;
+            }
+        }
+}
+
+
+@media (min-width: 325px) and (max-width: 576px) {
+    .grid-area3 {
+        display: grid;
+        height: 100vh;
+        grid-template-areas: 
+            "navb"
+            "bann"
+            "prop"
+            "prod"  
+            "foot";
+        grid-template-columns: 100vw;
+    }
+}
+
+.banner {
+    grid-area: bann;
+    display:flex;
+    background: linear-gradient(rgb(4 1 1),rgba(0, 0, 0, 0.034)) ,url(../img/producto/barberia.jpg);
+    background-attachment: fixed;
+    text-align: center;
+    height: 20rem;
+    align-items: center;
+    justify-content: center;
+    background-size:cover;
+    h2 {
+        color: rgba(255, 255, 255, 0.467);
+        text-decoration: underline;
+        font-size: 4rem;
+        font-style: oblique;
+        text-transform: uppercase;
+        font-stretch: condensed;
+        font-weight: bold;
+        animation-name: mover;
+        animation-duration: 0s;
+        animation-iteration-count: initial;
+        }
+        @keyframes mover{
+
+        0% {
+            transform:translateX(-5%);
+        }
+
+        50% {
+            transform:translateX(10%);
+        }
+
+        100% {
+            transform:translateX(0%);
+        }
+    }   
+}
+
+.prop {
+    grid-area: prop;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: linear-gradient(45deg, #84837c,#b0a299);
+    .parrafo {
+        justify-content: center;
+        p {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bolder;
+        }
+    }
+    .imag {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        justify-content: space-evenly;
+    img {
+        border-radius: 2rem;
+        border: 1rem solid gold;
+        width: 20rem;
+    }
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        border: 1rem  solid #dfc30f;
+        width: 20rem;
+        margin: 1rem;
+        align-items: center;
+        padding: 1rem;
+        text-align: justify;
+        background-color: #000000;
+        color: white;
+        h4 {
+            text-align: center;
+            text-decoration: underline;
+        }
+}
+    .botonInfo {
+        border: 0.5rem  solid #dfc30f;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        background-color: #000000;
+        h3 { 
+            text-align: start;  
+            text-decoration:underline;  
+            color:white;
+        }
+    }
+}
+
+
+
+.grid-pr {
+    grid-area: prod;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background-color: black;
+    padding: 2rem;
+    .pr {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 2rem;
+        justify-content: space-evenly;
+        img{
+            width: 70%;
+            border-radius: 5rem;
+            box-shadow: 0 0.5rem 1rem 0.5rem #b0a299;
+            }
+            p{
+            font-size: 1.25rem;
+            color: white;
+            margin: 1rem;
+            }
+        }
 }
