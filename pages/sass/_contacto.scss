@@ -60,7 +60,7 @@
         }
         @media (min-width: 577px) and (max-width: 900px) {
         .mapa {
-            height: auto;
+            height: 100vh;
             display: flex;
             flex-direction:column;
 
@@ -80,7 +80,7 @@
             @media (min-width: 325px) and (max-width: 576px) {
 
                 .mapa {
-                    height: auto;
+                    height: 100vh;
                     display: flex;
                     flex-direction:column;
 
