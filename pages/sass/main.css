@@ -48,7 +48,6 @@
   color: #f1a34a;
   text-shadow: #f1a34a 0 0 2rem;
   text-transform: capitalize;
-  transform: scale(1.2);
 }
 
 @-webkit-keyframes aparecer {
@@ -92,6 +91,14 @@ footer .btnred a:hover {
   border-radius: 1rem;
 }
 
+@media (min-width: 1000px) {
+  .nav-link:hover {
+    color: #f1a34a;
+    text-shadow: #f1a34a 0 0 2rem;
+    text-transform: capitalize;
+    transform: scale(1.2);
+  }
+}
 @media (min-width: 577px) and (max-width: 768px) {
   /* globales */
   .titulo {
@@ -1548,7 +1555,7 @@ aside div video {
 
 @media (min-width: 577px) and (max-width: 900px) {
   .mapa {
-    height: 50rem;
+    height: 45rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1559,11 +1566,14 @@ aside div video {
   }
   .mapa .mapa__ubi iframe:hover {
     transform: none;
+  }
+  .bg--black2 {
+    height: 20rem;
   }
 }
 @media (min-width: 325px) and (max-width: 576px) {
   .mapa {
-    height: 30rem;
+    height: 35rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1576,6 +1586,10 @@ aside div video {
     transform: none;
   }
 }
+.bg--black2 {
+  height: 20rem;
+}
+
 .gridCarrito {
   display: grid;
   height: 100vh;

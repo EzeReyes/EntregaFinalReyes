@@ -60,7 +60,7 @@
         }
         @media (min-width: 577px) and (max-width: 900px) {
             .mapa {
-                height: 50rem;
+                height: 45rem;
                 display: flex;
                 flex-direction:column;
                 justify-content: center;
@@ -75,13 +75,17 @@
             }
             }
         }
+        
+        .bg--black2 {
+            height: 20rem;
+        }
     }
         
     
             @media (min-width: 325px) and (max-width: 576px) {
 
                 .mapa {
-                    height: 30rem;
+                    height: 35rem;
                     display: flex;
                     flex-direction:column;
                     justify-content: center;
@@ -96,4 +100,8 @@
                     }
                     }
                 }
+            }
+
+            .bg--black2 {
+                height: 20rem;
             }

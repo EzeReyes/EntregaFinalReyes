@@ -36,7 +36,6 @@
                 color: #f1a34a;
                 text-shadow:#f1a34a 0 0 2rem;
                 text-transform: capitalize;
-                transform: scale(1.2);
             }
     }
 }
@@ -75,18 +74,22 @@
     }
 
 
+    @media (min-width: 1000px) {
 
-
-
+    .nav-link:hover {
+        color: #f1a34a;
+        text-shadow:#f1a34a 0 0 2rem;
+        text-transform: capitalize;
+        transform: scale(1.2);
+    }
+    }
 
     @media (min-width: 577px) and (max-width: 768px) {
 
         /* globales */
-        
         .titulo {
             display: none;
         } 
-        
         footer img {
             max-block-size: -webkit-fill-available;
         }
