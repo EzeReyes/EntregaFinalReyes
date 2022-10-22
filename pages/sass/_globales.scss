@@ -16,9 +16,30 @@
             animation-iteration-count:initial;
             border-radius: 0.5rem;
             border: inset;
-            } 
+            }
+            .nav-item{
+            .loguito {
+                width: 2rem;
+                box-shadow: rgb(255, 255, 255) 0 0 1rem;
+                border-radius: 50%;
+            }
+            .loguito:hover {
+                box-shadow: #f1a34a 0 0 2rem;
+                transform: scale(1.2);
+            }
+            .nav-link {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                color: rgb(255, 255, 255);
+                text-shadow:rgb(255, 242, 242) 0 0 1rem;
+            }
+            .nav-link:hover {
+                color: #f1a34a;
+                text-shadow:#f1a34a 0 0 2rem;
+                text-transform: capitalize;
+                transform: scale(1.2);
+            }
     }
-
+}
     @keyframes aparecer {
         0% {
         opacity: 0;
@@ -31,11 +52,14 @@
         
     footer {
         grid-area: foot;
-        background-image: linear-gradient(to top,black,white);
+        background-image: linear-gradient(to top,black,grey);
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         height: 4em;
+        p {
+            color:#e9ecef;
+        }
         .btnred {
             display: flex;
             align-items: center;    

@@ -30,6 +30,26 @@
   border-radius: 0.5rem;
   border: inset;
 }
+.menu .nav-item .loguito {
+  width: 2rem;
+  box-shadow: rgb(255, 255, 255) 0 0 1rem;
+  border-radius: 50%;
+}
+.menu .nav-item .loguito:hover {
+  box-shadow: #f1a34a 0 0 2rem;
+  transform: scale(1.2);
+}
+.menu .nav-item .nav-link {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(255, 242, 242) 0 0 1rem;
+}
+.menu .nav-item .nav-link:hover {
+  color: #f1a34a;
+  text-shadow: #f1a34a 0 0 2rem;
+  text-transform: capitalize;
+  transform: scale(1.2);
+}
 
 @-webkit-keyframes aparecer {
   0% {
@@ -50,11 +70,14 @@
 }
 footer {
   grid-area: foot;
-  background-image: linear-gradient(to top, black, white);
+  background-image: linear-gradient(to top, black, grey);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   height: 4em;
+}
+footer p {
+  color: #e9ecef;
 }
 footer .btnred {
   display: flex;
@@ -1525,9 +1548,10 @@ aside div video {
 
 @media (min-width: 577px) and (max-width: 900px) {
   .mapa {
-    height: 100vh;
+    height: 50rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
   .mapa .mapa__ubi iframe {
     border-radius: 1rem;
@@ -1539,9 +1563,10 @@ aside div video {
 }
 @media (min-width: 325px) and (max-width: 576px) {
   .mapa {
-    height: 100vh;
+    height: 30rem;
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
   .mapa .mapa__ubi iframe {
     border-radius: 1rem;

@@ -59,10 +59,11 @@
             }
         }
         @media (min-width: 577px) and (max-width: 900px) {
-        .mapa {
-            height: 100vh;
-            display: flex;
-            flex-direction:column;
+            .mapa {
+                height: 50rem;
+                display: flex;
+                flex-direction:column;
+                justify-content: center;
 
         .mapa__ubi {
             iframe {
@@ -80,9 +81,10 @@
             @media (min-width: 325px) and (max-width: 576px) {
 
                 .mapa {
-                    height: 100vh;
+                    height: 30rem;
                     display: flex;
                     flex-direction:column;
+                    justify-content: center;
 
                 .mapa__ubi {
                     iframe {
