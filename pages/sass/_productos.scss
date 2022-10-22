@@ -243,6 +243,7 @@
     padding: 2rem;
     .pr {
         display: flex;
+        flex-direction: column;
         align-items: center;
         margin: 6rem;
         justify-content: space-evenly;

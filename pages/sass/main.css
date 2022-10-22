@@ -1251,6 +1251,7 @@ aside div video {
   }
   .grid-pr .pr {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin: 6rem;
     justify-content: space-evenly;
