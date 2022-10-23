@@ -12,4 +12,4 @@ https://github.com/EzeReyes/PreEntrega2Reyes.git
 
 Acceso al sitio desde webhost:
 
-https://elabuelomario.000webhostapp.com/
+https://abuelomario.000webhostapp.com/
